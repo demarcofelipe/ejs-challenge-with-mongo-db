@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+<p><%=startingContent%></p>
+
+
+
+<% listOfPosts.forEach(function (element) { %>
+
+
+<div class="">
+
+<h1><%= element.title %></h1>
+<p><%= element.content.substring(0,100)  + " ..." %>
+<a href="/posts/<%= element._id %>">Read More</a>
+</p>
+
+</div>
+
+<% }) %>
+
+<button type="button" class="btn btn-secondary"><a href="/compose">NEW ENTRY</a></button>
+
+
+
+<%- include('partials/footer'); -%>
